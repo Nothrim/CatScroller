@@ -1,28 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import {PictureFrame} from "./components/PictureFrame/PictureFrame";
+import PictureScroller from "./components/PictureScroller/PictureScroller";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+class App extends Component<{}, { catVideo: string, catImage: string }> {
+    constructor(props: any) {
+        super(props);
+        this.state = {catVideo: "https://i.imgur.com/7nLm7si.mp4", catImage: "https://i.imgur.com/XSzjKZO.png"}
+    }
+
+    render() {
+        return (
+            <div className="App">
+               <PictureFrame url={this.state.catVideo}/>
+               <PictureFrame url={this.state.catImage}/>
+               <PictureScroller/>
+            </div>
+        );
+    }
 }
+
 
 export default App;

@@ -1,0 +1,17 @@
+.pictureFrame {
+    overflow: hidden;
+    background-color: #181f30;
+    width: 600px;
+    max-width: 600px;
+    height: 600px;
+    max-height: 600px;
+    padding: 5px;
+    margin: 5px auto;
+    box-shadow: 10px 10px 10px 10px #1F1F1F;
+    /*filter: blur(8px);*/
+    /*-webkit-filter: blur(8px);*/
+}
+.picture {
+    padding: -5px;
+    object-fit: cover;
+}
