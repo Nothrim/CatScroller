@@ -36,4 +36,5 @@ dependencies {
     compile "io.ktor:ktor-server-sessions:$ktor_version"
     compile "io.ktor:ktor-gson:$ktor_version"
     testCompile "io.ktor:ktor-server-tests:$ktor_version"
+    compile 'org.jetbrains.exposed:exposed:0.13.1'
 }

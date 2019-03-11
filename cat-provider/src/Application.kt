@@ -46,6 +46,10 @@ fun Application.module() {
             call.respondText("HELLO WORLD!", contentType = ContentType.Text.Plain)
         }
 
+        get("/test") {
+            call.respondText { application.environment.config.property("app.imgur.private").getString() }
+        }
+
         get("/session/increment") {
             val session = call.sessions.get<MySession>() ?: MySession()
             call.sessions.set(session.copy(count = session.count + 1))
