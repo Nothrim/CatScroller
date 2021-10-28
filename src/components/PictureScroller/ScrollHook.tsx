@@ -9,13 +9,11 @@ export const ScrollHook = (callback: Function): [boolean, (val: boolean) => void
 
     useEffect(() => {
         if (!isFetching) return;
-        callback(() => {
-            console.log("called back");
-        })
+        callback()
     }, [isFetching]);
 
     function handleScroll() {
-        if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight
+        if (window.innerHeight + document.documentElement.scrollTop < document.documentElement.offsetHeight -50
             || isFetching) return;
         setIsFetching(true);
     }

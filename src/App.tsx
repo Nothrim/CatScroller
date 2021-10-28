@@ -12,7 +12,7 @@ class App extends Component<{}, { catVideo: string, catImage: string }> {
     render() {
         return (
             <div className="App">
-               <PictureScroller urls={[this.state.catVideo,this.state.catImage]}/>
+               <PictureScroller urls={[this.state.catVideo,this.state.catImage,"https://i.imgur.com/2bvab7yb.jpg"]}/>
             </div>
         );
     }

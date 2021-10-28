@@ -1,5 +1,6 @@
 import * as React from "react"
 import './PictureFrame.css'
+import {LikeButton} from "../LikeButton/LikeButton";
 
 export interface PictureFrame {
     url: string
@@ -20,5 +21,6 @@ export const PictureFrame = (props: PictureFrame) => {
         backgroundImage: props.url
     };
     return <div style={style} className={"pictureFrame"}>{content}
+        <LikeButton/>
     </div>
 };
